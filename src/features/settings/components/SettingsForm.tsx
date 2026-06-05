@@ -40,6 +40,14 @@ export default function SettingsForm({ settings }: Props) {
   const [alertTimezone, setAlertTimezone] = React.useState(settings.alert_timezone)
   const [currency, setCurrency] = React.useState((settings as any).currency ?? 'CRC')
 
+  const handleTimezoneChange = (value: string | null) => {
+    if (value !== null) setAlertTimezone(value)
+  }
+
+  const handleCurrencyChange = (value: string | null) => {
+    if (value !== null) setCurrency(value)
+  }
+
   async function handleTest() {
     startTest(async () => {
       const result = await triggerAlertNow()
@@ -85,7 +93,7 @@ export default function SettingsForm({ settings }: Props) {
           </div>
           <div className="space-y-2">
             <Label htmlFor="currency">Moneda</Label>
-            <Select value={currency} onValueChange={setCurrency}>
+            <Select value={currency} onValueChange={handleCurrencyChange}>
               <SelectTrigger id="currency">
                 <SelectValue placeholder="Seleccionar moneda">
                   {CURRENCIES.find(c => c.code === currency)?.label || 'Seleccionar moneda'}
@@ -163,7 +171,7 @@ export default function SettingsForm({ settings }: Props) {
             </div>
             <div className="space-y-2 sm:col-span-2">
               <Label htmlFor="alert_timezone">Zona horaria</Label>
-              <Select value={alertTimezone} onValueChange={setAlertTimezone}>
+              <Select value={alertTimezone} onValueChange={handleTimezoneChange}>
                 <SelectTrigger id="alert_timezone">
                   <SelectValue placeholder="Seleccionar zona horaria">
                     {TIMEZONES.find(tz => tz.value === alertTimezone)?.label || 'Seleccionar zona horaria'}

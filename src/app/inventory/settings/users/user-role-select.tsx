@@ -9,7 +9,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { changeUserRole, removeUserRole } from '@/features/users/actions'
-import { ROLE_LABELS } from '@/features/users/queries'
+import { ROLE_LABELS } from '@/features/users/constants'
 import type { UserRole } from '@/types'
 
 const ROLES: UserRole[] = ['admin', 'nurse', 'purchasing', 'readonly']

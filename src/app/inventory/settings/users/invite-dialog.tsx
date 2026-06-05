@@ -20,7 +20,7 @@ import {
   SelectValue,
 } from '@/components/ui/select'
 import { inviteUser } from '@/features/users/actions'
-import { ROLE_LABELS, ROLE_DESCRIPTIONS } from '@/features/users/queries'
+import { ROLE_LABELS, ROLE_DESCRIPTIONS } from '@/features/users/constants'
 import type { UserRole } from '@/types'
 
 const ROLES: UserRole[] = ['admin', 'nurse', 'purchasing', 'readonly']
