@@ -28,8 +28,7 @@ export async function saveSettings(_prevState: unknown, formData: FormData) {
 
   const { error } = await supabase.from('settings').update({
     clinic_name:                      v.clinic_name,
-    // TODO: uncomment currency once migration is applied to database
-    // currency:                         v.currency,
+    currency:                         v.currency,
     alert_recipient_name:             v.alert_recipient_name             || null,
     alert_recipient_email:            v.alert_recipient_email            || null,
     alert_recipient_telegram_chat_id: v.alert_recipient_telegram_chat_id || null,

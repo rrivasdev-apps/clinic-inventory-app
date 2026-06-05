@@ -331,6 +331,7 @@ export type Database = {
           alert_timezone: string
           clinic_name: string
           created_at: string
+          currency: string
           id: string
           updated_at: string
         }
@@ -344,6 +345,7 @@ export type Database = {
           alert_timezone?: string
           clinic_name?: string
           created_at?: string
+          currency?: string
           id?: string
           updated_at?: string
         }
@@ -357,6 +359,7 @@ export type Database = {
           alert_timezone?: string
           clinic_name?: string
           created_at?: string
+          currency?: string
           id?: string
           updated_at?: string
         }
