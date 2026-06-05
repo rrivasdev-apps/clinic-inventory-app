@@ -1,0 +1,40 @@
+{
+  "name": "Inventario Clínica",
+  "short_name": "Inventario",
+  "description": "Sistema de gestión de inventario para clínica",
+  "start_url": "/inventory/dashboard",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait-primary",
+  "background_color": "#ffffff",
+  "theme_color": "#0f172a",
+  "categories": ["medical", "productivity"],
+  "icons": [
+    {
+      "src": "/icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Registrar salida",
+      "short_name": "Salida",
+      "url": "/inventory/movements/new",
+      "description": "Registrar una salida de material"
+    },
+    {
+      "name": "Ver alertas",
+      "short_name": "Alertas",
+      "url": "/inventory/alerts",
+      "description": "Ver alertas de stock crítico"
+    }
+  ]
+}
